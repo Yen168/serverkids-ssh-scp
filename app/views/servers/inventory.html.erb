@@ -1,0 +1,53 @@
+ <div class="jumbotron">
+      <div class="container">
+        <h1><%= @server.name %>@<%= @server.host%> </h1>
+        <br>
+        <p><%= link_to "Back to home", root_path ,class: "btn btn-primary btn-large"%> 
+
+        
+		
+      </div>
+    </div>
+
+
+
+
+
+
+
+ <div class="container">
+      <!-- Example row of columns -->
+
+ <div class="row">
+
+    <% if !@complete_results.blank? %>
+    <% @result.each do |n| %>
+    <% if n != "dev" %>
+
+	
+        <div class="col-md-8">
+        <h2><b><%= n %></b> <%= link_to "Transfer","/send"+server_path(@server)+"/s/#{n}", data: { confirm: "You sure?" } ,class: "btn btn-success"%> </h2> 
+          
+	
+		 </div>
+   <% end %> 
+	<% end %>
+         
+ 
+     
+	<% else %>
+	<b>Time out!!!</b>
+	<BR>
+<% end %>
+      
+        
+      </div>
+
+    </div> 
+
+
+
+
+
+
+	

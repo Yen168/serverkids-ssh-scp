@@ -1,0 +1,35 @@
+
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>ServerKids</h1>
+        <p>Make Life Easier!</p>
+        <p><%= link_to "Add a Server", new_path ,class: "btn btn-primary btn-large" %></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+
+      
+
+
+
+      <div class="row">
+        <% @result.each do |n| %>
+        <div class="col-md-4">
+          <h2><b><%= n.name %></b><br>@<%= n.host %></h2>
+          <p></p>
+          <p><%= link_to "delete", n, method: :delete, data: { confirm: "You sure?" } ,class: "btn btn-danger" %> <%= link_to "Server Info >>", server_path(n.id), class: "btn btn-default" %></p>
+        
+
+          </div>
+
+      <% end %>
+      
+        
+      </div>
+
+      
+    </div> 

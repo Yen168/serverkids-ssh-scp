@@ -1,0 +1,53 @@
+ <div class="jumbotron">
+      <div class="container">
+        <h1><%= @server.name %>@<%= @server.host%> </h1>
+        <br>
+        <p><%= link_to "Back to home", root_path ,class: "btn btn-primary btn-large"%> <%= link_to "Get File", "/inventory"+server_path(@server) ,class: "btn btn-info"%></p>
+
+        
+		
+      </div>
+    </div>
+
+
+
+
+
+
+
+ <div class="container">
+      <!-- Example row of columns -->
+
+ <div class="row">
+
+    <% if !@complete_results.blank? %>
+    <% @result.each do |n| %>
+    <% if n != "dev" %>
+
+	
+        <div class="col-md-4">
+        <h2><b><%= n %></b> <%= link_to "delete",server_path(@server)+"/#{n}", data: { confirm: "You sure?" } ,class: "btn btn-danger"%> </h2> 
+          
+	
+		 </div>
+   <% end %> 
+	<% end %>
+         
+ 
+     
+	<% else %>
+	<b>Time out!!!</b>
+	<BR>
+<% end %>
+      
+        
+      </div>
+
+    </div> 
+
+
+
+
+
+
+	

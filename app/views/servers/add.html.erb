@@ -1,0 +1,26 @@
+<h1>Add a Server</h1>
+
+<div >
+  <div >
+    <%= form_for(@server) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+       <%= f.label :user %>
+       <%= f.text_field :user %>
+
+      <%= f.label :host %>
+      <%= f.text_field :host %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Create Server Info", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+

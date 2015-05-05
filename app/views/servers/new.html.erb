@@ -1,0 +1,27 @@
+
+<div class="container">
+
+      
+        <h2 class="form-signin-heading">Add a Server</h2>
+        <%= form_for(@server) do |f| %>
+        <%= f.label :name ,class: "sr-only" %>
+        <%= f.text_field :name ,class: "form-control" ,placeholder: "Server Name" %>
+        
+        <%= f.label :user ,class: "sr-only" %>
+        <%= f.text_field :user ,class: "form-control" ,placeholder: "User" %>
+
+        <%= f.label :host ,class: "sr-only" %>
+        <%= f.text_field :host ,class: "form-control" ,placeholder: "Host" %>
+
+        <%= f.label :password ,class: "sr-only" %>
+        <%= f.password_field :password ,class: "form-control" ,placeholder: "Password" %>
+
+        <%= f.label :password_confirmation ,class: "sr-only" %>
+        <%= f.password_field :password_confirmation ,class: "form-control" ,placeholder: "Password Confirmation " %>
+
+        <%= f.submit "Create a Server Controller", class: "btn btn-lg btn-primary btn-block" %>
+      
+  
+   
+      <% end %>
+    </div>
